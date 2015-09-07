@@ -49,9 +49,9 @@ fi
 ########################################################################
 ## update update proxyuser config
 if [ "${config_proxyuser}" = true  ]; then
-  ${ambari_config_set} core-site hadoop.proxyuser.${ambari_user}.groups "users,hadoop-users"
+  ${ambari_config_set} core-site hadoop.proxyuser.${ambari_user}.groups "users,hdp-users"
   ${ambari_config_set} core-site hadoop.proxyuser.${ambari_user}.hosts "*"
-  ${ambari_config_set} webhcat-site webhcat.proxyuser.${ambari_user}.groups "users,hadoop-users"
+  ${ambari_config_set} webhcat-site webhcat.proxyuser.${ambari_user}.groups "users,hdp-users"
   ${ambari_config_set} webhcat-site webhcat.proxyuser.${ambari_user}.hosts= "*"
 fi
 
